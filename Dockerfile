@@ -8,4 +8,4 @@ ARG JAR_FILE=hrms-app-1.0-runner.jar
 COPY ${JAR_FILE} app.jar
 
 EXPOSE 8080
-ENTRYPOINT ["java","-Xms256m" ,"-Xmx500m", "-XX:+UseG1GC", "-jar", "/app.jar"]
+ENTRYPOINT ["java", "-Xmx256m", "-XX:+UseG1GC", "-jar", "/app.jar"]
