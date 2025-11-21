@@ -7,5 +7,5 @@ ENV DISPLAY=:99
 ARG JAR_FILE=hrms-app-1.0-runner.jar
 COPY ${JAR_FILE} app.jar
 
-EXPOSE 8080
-ENTRYPOINT ["java", "-Xmx256m", "-XX:+UseG1GC", "-jar", "/app.jar"]
+EXPOSE 2126
+ENTRYPOINT ["java", "-Xmx256m", "-XX:+UseG1GC", "quarkus.http.port=2126", "-jar", "/app.jar"]
