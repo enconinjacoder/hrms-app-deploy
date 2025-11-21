@@ -8,4 +8,4 @@ ARG JAR_FILE=hrms-app-1.0-runner.jar
 COPY ${JAR_FILE} app.jar
 
 EXPOSE 2126
-ENTRYPOINT ["java", "-Xmx256m", "-XX:+UseG1GC", "quarkus.http.port=2126", "-jar", "/app.jar"]
+ENTRYPOINT ["java", "-Xmx256m", "-XX:+UseG1GC", "-Dquarkus.http.port=2126", "-jar", "/app.jar"]
